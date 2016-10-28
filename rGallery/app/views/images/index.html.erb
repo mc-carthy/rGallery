@@ -10,7 +10,7 @@
                 <div class="photo-info">
                   <div class="headline"><%= image.image_title %></div>
                   <div class="line"></div>
-                  <div class="desc"><%= image.image_description %></div>
+                  <div class="desc"><%= image.image_description.truncate(200) %></div>
                 </div>
                 <div class="mask"></div>
               </a>
