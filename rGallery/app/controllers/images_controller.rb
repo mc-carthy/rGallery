@@ -6,7 +6,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
 
-    if @category.save
+    if @image.save
       flash[:notice] = 'Image Uploaded Successfully'
       redirect_to root_path
     else
