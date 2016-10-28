@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'images/new'
+  
+  get 'upload' => 'images#new', :as => 'upload'
 
   get 'images/create'
 
@@ -19,5 +20,7 @@ Rails.application.routes.draw do
 
   get 'categories/show'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :images, :categories
+
+  root 'images#index'
 end
